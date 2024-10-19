@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -60,14 +61,14 @@ fun BusinessCard() {
 
         // Section pour le nom et le titre
         Text(
-            text = "Amian Attobra Charles",
+            text = stringResource(R.string.name),
             style = MaterialTheme.typography.headlineMedium.copy(
                 fontWeight = FontWeight.Bold
             ),
             modifier = Modifier.padding(bottom = 8.dp)
         )
         Text(
-            text = "Developpeur d'application",
+            text = stringResource(R.string.title),
             style = MaterialTheme.typography.bodyLarge.copy(
                 color = Color.Gray
             ),
@@ -75,9 +76,9 @@ fun BusinessCard() {
         )
 
         // Section des informations de contact
-        ContactInfo(icon = R.drawable.ic_phone, contactText = "+225 07 68 63 29 88")
-        ContactInfo(icon = R.drawable.ic_social_media, contactText = "@jeancharlesamian15")
-        ContactInfo(icon = R.drawable.ic_email, contactText = "jeancharlesamian15@gmail.com")
+        ContactInfo(icon = R.drawable.ic_phone, contactText = stringResource(R.string.telephone))
+        ContactInfo(icon = R.drawable.ic_social_media, contactText = stringResource(R.string.reseau_social))
+        ContactInfo(icon = R.drawable.ic_email, contactText = stringResource(R.string.email))
     }
 }
 
